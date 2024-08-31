@@ -10,7 +10,7 @@ app.use(bodyParser.json());
 app.use(cors());
 
 // Importar y usar las rutas
-//const serviciosRoutes = require('./routes/serviciosRoutes');
-//app.use('/api/servicios', serviciosRoutes);
+const serviceRoutes = require('./routes/serviceRoutes');
+app.use('/api/servicios', serviceRoutes);
 
 module.exports=app;
