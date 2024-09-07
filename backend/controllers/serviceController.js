@@ -25,7 +25,7 @@ exports.createService = async (req, res) => {
 // Actualizar un servicio existente
 exports.updateService = async (req, res) => {
   try {
-    const service = await Service.findByIdAndUpdate(req.params.id, req.body, { new: true });
+    const service = await Service.findByIdAndUpdate(req.body.ID, req.body);
     if (!service) return res.status(404).json({ message: 'Servicio no encontrado' });
     res.status(200).json(service);
   } catch (error) {

@@ -17,7 +17,7 @@ export const createService = async (service) => {
 
 // Actualizar un servicio existente
 export const updateService = async (id, service) => {
-  const response = await axios.put(`${API_URL}/${id}`, service);
+  const response = await axios.put(API_URL, service);
   return response.data;
 };
 
